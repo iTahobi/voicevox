@@ -7,7 +7,7 @@
       "エンジンの更新により一部操作での音質低下が低減"
     ],
     "contributors": [
-      "VOICEVOX/voicevox/tree/0.14.3",
+      "VOICEVOX/voicevox/tree/0.14.5",
       "voicevox-bridge/bridge-plugin/tree/0.1.0"
     ]
   },
