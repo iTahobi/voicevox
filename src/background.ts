@@ -59,11 +59,11 @@ if (isTest) {
 } else if (isDevelopment) {
   suffix = "-dev";
 }
-console.log(`Environment: ${import.meta.env.MODE}, appData: voicevox${suffix}`);
+console.log(`Environment: ${import.meta.env.MODE}, appData: itvoice${suffix}`);
 
 // Electronの設定ファイルの保存場所を変更
 const beforeUserDataDir = app.getPath("userData"); // 設定ファイルのマイグレーション用
-const fixedUserDataDir = path.join(app.getPath("appData"), `voicevox${suffix}`);
+const fixedUserDataDir = path.join(app.getPath("appData"), `itvoice${suffix}`);
 if (!fs.existsSync(fixedUserDataDir)) {
   fs.mkdirSync(fixedUserDataDir);
 }
