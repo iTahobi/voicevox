@@ -36,7 +36,7 @@ uuid、name、hostをそれぞれ変更。
 VOICEVOX Project fileをITVOICE Project fileに、
 vvprojをivprojに変更した。
 「electron-builder.config.js」では77～79行目のproductName、appId、copyrightをイタボ仕様に変更、
-「background.ts」532行目のlabelにITVOICEと記載、
+「background.ts」62行目と66行目の設定保存先にitvoiceを設定、532行目のlabelにITVOICEと記載、
 「project.ts」18行目DEFAULT_SAMPLING_RATEを44100に指定した。
 
 「icon.png」「icon-mac.png」「icon-dmg.icns」
