@@ -22,13 +22,13 @@
             <li>{{ item }}</li>
           </template>
         </ul>
-        <h4>貢献者リスト</h4>
+        <h4>使用させて頂いたコード</h4>
         <p>
           <template
             v-for="(item, contributorIndex) of info.contributors"
             :key="contributorIndex"
           >
-            <span v-if="contributorIndex > 0"> / </span>
+            <span v-if="contributorIndex > 0"> <br /> </span>
             <a :href="`https://github.com/${item}`" target="_blank">{{
               item
             }}</a>

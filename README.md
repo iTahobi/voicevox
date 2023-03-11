@@ -1,3 +1,56 @@
+# ITVOICE制作時の変更箇所まとめ
+「.env」「.env.production」
+uuid、name、hostをそれぞれ変更。
+.envではrun.exeのパスも書き換え。
+
+「AcceptRetrieveTelemetryDialog.vue」
+14行目のページタイトル、
+23行目「拒否」ボタンを「ITVOICE 利用規約に同意する」ボタンにし29行目に「</div>」と追記、31行目に「<div style="display: none">」を追加、
+47行目の説明文を変更。
+
+「privacyPolicy.md」「policy.md」
+内容をイタボのものへ変更。
+
+「howtouse.md」
+対応拡張子、アプリ名や機能に齟齬が生じないよう文章を一部変更。
+
+
+「ossCommunityInfos.md」
+当ソフトがVOICEVOXのほかにbridge-pluginも基にしている旨を追記。
+
+「updateInfos.json」
+内容を本アプリのものに合わせた。
+基礎としたコード群のIDは「a23a7ac」であったが、ここにもともとあった文章には"version": "0.14.5"とあったので、これはもうここの文章を信じる。
+
+「UpdateInfo.vue」
+25行目「貢献者リスト」を「使用させて頂いたコード」に、
+31行目「/」を「<br />」に変更。
+
+「qAndA.md」「contact.md」
+内容をイタボ用に更新。
+
+「SettingDialog.vue」
+692～714行目にかかるデータ収集に関するコードを削除。
+
+「electron-builder.config.js」「installer_linux.sh」「background.ts」「project.ts」「EditorHome.vue」
+VOICEVOX Project fileをITVOICE Project fileに、
+vvprojをivprojに変更した。
+「electron-builder.config.js」では77～79行目のproductName、appId、copyrightをイタボ仕様に変更、
+「background.ts」532行目のlabelにITVOICEと記載、
+「project.ts」18行目DEFAULT_SAMPLING_RATEを44100に指定した。
+
+「icon.png」「icon-mac.png」「icon-dmg.icns」
+イタボのものに上書きした。
+
+「package.json」
+name、version、authorをイタボ仕様に変更。
+
+「MenuBar.vue」
+101行目をITVOICE on VOICEVOXに書き換えた。
+
+「default.json」「dark.json」「main.ts」「icon.svg」
+テーマカラーをいつもの紫#8232C8に変更した。
+
 # VOICEVOX
 
 [VOICEVOX](https://voicevox.hiroshiba.jp/) のエディターです。
@@ -12,7 +65,7 @@
 
 ## 貢献者の方へ
 
-VOICEVOX のエディタは Electron・TypeScript・Vue・Vuex などが活用されており、全体構成がわかりにくくなっています。  
+VOICEVOX のエディタは Electron・TypeScript・Vue・Vuex などが活用されており、全体構成がわかりにくくなっています。
 [コードの歩き方](./docs/コードの歩き方.md)で構成を紹介しているので、開発の一助になれば幸いです。
 
 Issue を解決するプルリクエストを作成される際は、別の方と同じ Issue に取り組むことを避けるため、

@@ -704,14 +704,14 @@ const loadDraggedFile = (event?: { dataTransfer: DataTransfer }) => {
     case ".txt":
       store.dispatch("COMMAND_IMPORT_FROM_FILE", { filePath: file.path });
       break;
-    case ".vvproj":
+    case ".ivproj":
       store.dispatch("LOAD_PROJECT_FILE", { filePath: file.path });
       break;
     default:
       $q.dialog({
         title: "対応していないファイルです",
         message:
-          "テキストファイル (.txt) とVOICEVOXプロジェクトファイル (.vvproj) に対応しています。",
+          "テキストファイル (.txt) とITVOICEプロジェクトファイル (.ivproj) に対応しています。",
         ok: {
           label: "閉じる",
           flat: true,
@@ -723,8 +723,8 @@ const loadDraggedFile = (event?: { dataTransfer: DataTransfer }) => {
 </script>
 
 <style scoped lang="scss">
-@use '@/styles/variables' as vars;
-@use '@/styles/colors' as colors;
+@use "@/styles/variables" as vars;
+@use "@/styles/colors" as colors;
 
 .q-header {
   height: vars.$header-height;

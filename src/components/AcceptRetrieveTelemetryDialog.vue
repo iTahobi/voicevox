@@ -11,7 +11,7 @@
         <q-toolbar>
           <div class="column">
             <q-toolbar-title class="text-display"
-              >使いやすさ向上のためのお願い</q-toolbar-title
+              >ITVOICE 利用規約</q-toolbar-title
             >
           </div>
 
@@ -20,13 +20,15 @@
           <div class="row items-center no-wrap">
             <q-btn
               unelevated
-              label="拒否"
+              label="ITVOICE利用規約に同意する"
               color="toolbar-button"
               text-color="toolbar-button-display"
               class="text-no-wrap q-mr-md text-bold"
               @click="handler(false)"
             />
+          </div>
 
+          <div style="display: none">
             <q-btn
               unelevated
               label="許可"
@@ -42,15 +44,11 @@
       <q-page-container>
         <q-page>
           <p class="text-body1 q-mb-lg">
-            VOICEVOXはより使いやすいソフトウェアを目指して開発されています。<br /><br />
-            ボタンの配置換えなどの方針を決める際は、各UIの利用率などの情報が重要になります。<br />
-            もしよろしければ、ソフトウェアの利用状況のデータ収集にご協力お願いします。<br />
-            <br />
-            （入力されたテキストデータや音声データの情報は収集しておりませんのでご安心ください。）
+            ITVOICEの使用に際しては、利用規約に同意する必要があります。
           </p>
           <q-card flat bordered>
             <q-card-section>
-              <div class="text-h5">プライバシーポリシー</div>
+              <div class="text-h5">ITVOICE 利用規約</div>
             </q-card-section>
 
             <q-card-section class="text-body1">

@@ -422,11 +422,11 @@ cat << EOS > "${MIME_INSTALL_DIR}/packages/voicevox.xml"
 <?xml version="1.0" encoding="utf-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
     <mime-type type="application/x-voicevox">
-        <comment>VOICEVOX Project file</comment>
-        <comment xml:lang="ja">VOICEVOX プロジェクトファイル</comment>
+        <comment>ITVOICE Project file</comment>
+        <comment xml:lang="ja">ITVOICE プロジェクトファイル</comment>
         <sub-class-of type="application/json" />
-        <glob pattern="*.vvproj" />
-        <icon name="voicevox" />
+        <glob pattern="*.ivproj" />
+        <icon name="itvoice" />
     </mime-type>
     <mime-type type="application/x-voicevox-plugin-package">
         <comment>VOICEVOX Plugin package</comment>

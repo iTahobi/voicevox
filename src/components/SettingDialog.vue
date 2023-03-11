@@ -689,29 +689,6 @@
                 </q-toggle>
               </q-card-actions>
             </q-card>
-            <q-card flat class="setting-card">
-              <q-card-actions>
-                <div class="text-h5">データ収集</div>
-              </q-card-actions>
-              <q-card-actions class="q-px-md q-py-none bg-surface">
-                <div>ソフトウェア利用状況のデータ収集を許可する</div>
-                <div>
-                  <q-icon name="help_outline" size="sm" class="help-hover-icon">
-                    <q-tooltip
-                      :delay="500"
-                      anchor="center left"
-                      self="center right"
-                      transition-show="jump-left"
-                      transition-hide="jump-right"
-                    >
-                      各UIの利用率などのデータを送信してVOICEVOXの改善に役立てます。テキストデータ・音声データは送信しません。
-                    </q-tooltip>
-                  </q-icon>
-                </div>
-                <q-space />
-                <q-toggle v-model="acceptRetrieveTelemetryComputed" />
-              </q-card-actions>
-            </q-card>
           </div>
         </q-page>
       </q-page-container>

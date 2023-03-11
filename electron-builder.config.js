@@ -38,11 +38,11 @@ const builderOptions = {
   files: ["dist/**/*", "package.json"],
   fileAssociations: [
     {
-      ext: "vvproj",
-      name: "VOICEVOX Project file",
-      description: "VOICEVOX Project file",
+      ext: "ivproj",
+      name: "ITVOICE Project file",
+      description: "ITVOICE Project file",
       role: "Editor",
-      icon: "icons/vvproj." + (isMac ? "icns" : "ico"),
+      icon: "icons/ivproj." + (isMac ? "icns" : "ico"),
     },
     {
       ext: "vvpp",
@@ -74,9 +74,9 @@ const builderOptions = {
     },
   ],
   // electron-builder installer
-  productName: "VOICEVOX",
-  appId: "jp.hiroshiba.voicevox",
-  copyright: "Hiroshiba Kazuyuki",
+  productName: "ITVOICEonVOICEVOX",
+  appId: "itvoice.on.voicevox",
+  copyright: "ITahobi",
   afterAllArtifactBuild: path.resolve(
     __dirname,
     "build",

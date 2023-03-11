@@ -444,7 +444,7 @@ async function createWindow() {
   let projectFilePath: string | undefined = "";
   if (isMac) {
     if (filePathOnMac) {
-      if (filePathOnMac.endsWith(".vvproj")) {
+      if (filePathOnMac.endsWith(".ivproj")) {
         projectFilePath = encodeURI(filePathOnMac);
       }
       filePathOnMac = undefined;
@@ -455,7 +455,7 @@ async function createWindow() {
       if (
         fs.existsSync(filePath) &&
         fs.statSync(filePath).isFile() &&
-        filePath.endsWith(".vvproj")
+        filePath.endsWith(".ivproj")
       ) {
         projectFilePath = encodeURI(filePath);
       }
@@ -529,7 +529,7 @@ async function start() {
 
 const menuTemplateForMac: Electron.MenuItemConstructorOptions[] = [
   {
-    label: "VOICEVOX",
+    label: "ITVOICE",
     submenu: [{ role: "quit" }],
   },
   {
@@ -645,7 +645,7 @@ ipcMainHandle("SHOW_PROJECT_SAVE_DIALOG", async (_, { title, defaultPath }) => {
   const result = await dialog.showSaveDialog(win, {
     title,
     defaultPath,
-    filters: [{ name: "VOICEVOX Project file", extensions: ["vvproj"] }],
+    filters: [{ name: "ITVOICE Project file", extensions: ["ivproj"] }],
     properties: ["showOverwriteConfirmation"],
   });
   if (result.canceled) {
@@ -657,7 +657,7 @@ ipcMainHandle("SHOW_PROJECT_SAVE_DIALOG", async (_, { title, defaultPath }) => {
 ipcMainHandle("SHOW_PROJECT_LOAD_DIALOG", async (_, { title }) => {
   const result = await dialog.showOpenDialog(win, {
     title,
-    filters: [{ name: "VOICEVOX Project file", extensions: ["vvproj"] }],
+    filters: [{ name: "ITVOICE Project file", extensions: ["ivproj"] }],
     properties: ["openFile", "createDirectory", "treatPackageAsDirectory"],
   });
   if (result.canceled) {
@@ -1045,8 +1045,8 @@ app.on("second-instance", async (event, argv, workDir, rawData) => {
         restartNeeded: true,
       });
     }
-  } else if (data.filePath.endsWith(".vvproj")) {
-    log.info("Second instance launched with vvproj file");
+  } else if (data.filePath.endsWith(".ivproj")) {
+    log.info("Second instance launched with ivproj file");
     ipcMainSend(win, "LOAD_PROJECT_FILE", {
       filePath: data.filePath,
       confirm: true,

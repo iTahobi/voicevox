@@ -1,7 +1,7 @@
 {
-  "name": "voicevox",
-  "version": "999.999.999",
-  "author": "Hiroshiba Kazuyuki",
+  "name": "itvoice",
+  "version": "1.0.2",
+  "author": "ITahobi",
   "private": true,
   "main": "./dist/background.js",
   "engines": {

@@ -98,7 +98,7 @@ const titleText = computed(
   () =>
     (isEdited.value ? "*" : "") +
     (projectName.value !== undefined ? projectName.value + " - " : "") +
-    "VOICEVOX" +
+    "ITVOICE on VOICEVOX" +
     (currentVersion.value ? " - Ver. " + currentVersion.value : "") +
     (isMultiEngineOffMode.value ? " - マルチエンジンオフ" : "")
 );
@@ -532,7 +532,7 @@ watch(uiLocked, () => {
 </script>
 
 <style lang="scss">
-@use '@/styles/colors' as colors;
+@use "@/styles/colors" as colors;
 
 .active-menu {
   background-color: rgba(colors.$primary-rgb, 0.3) !important;
@@ -540,8 +540,8 @@ watch(uiLocked, () => {
 </style>
 
 <style scoped lang="scss">
-@use '@/styles/variables' as vars;
-@use '@/styles/colors' as colors;
+@use "@/styles/variables" as vars;
+@use "@/styles/colors" as colors;
 
 .q-bar {
   min-height: vars.$menubar-height;
